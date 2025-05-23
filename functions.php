@@ -8,11 +8,11 @@ function load_scripts(){
         'all'
     );
 
-    wp_enqueue_style('bootstrap',get_template_directory_uri().'/css/bootsrap.min.css')
+    wp_enqueue_style('bootstrap',get_template_directory_uri().'/css/bootstrap.min.css');
 
     wp_enqueue_script('dropdown',get_template_directory_uri().'/js/dropdown.js',array(),'1.0',false);
 
-      wp_enqueue_script('bootsrap2',get_template_directory_uri().'/js/bootsrap.bunde.min.js',array('jquery'));
+      wp_enqueue_script('bootsrap2',get_template_directory_uri().'/js/bootstrap.bundle.min.js',array('jquery'));
 }
 add_action('wp_enqueue_scripts', 'load_scripts');
 function config(){
