@@ -32,7 +32,7 @@ function config(){
             'height'=>110,
             'width'=>200,
             'flex-height'=>true,
-            flex-width=>true
+            'flex-width'=>true
 
         ));
 
