@@ -9,13 +9,13 @@
     );
 
 
-    wp_endque_style('bootstrap',get_template_directory_uri().'/css/bootstrap.min.css');
+    wp_enqueue_style('bootstrap',get_template_directory_uri().'/css/bootstrap.min.css');
 
 
 
     wp_enqueue_script('dropdown',get_template_directory_uri().'/js/dropdown.js',array(),'1.0',false);
 
-    wp_enqeue_script('bootstrap2',get_template_directory_uri() .'/js/bootstrap.budle.min.js',array('jquery'));
+    wp_enqueue_script('bootstrap2',get_template_directory_uri() .'/js/bootstrap.budle.min.js',array('jquery'));
 }
 add_action('wp_enqueue_scripts', 'load_scripts');
 function config(){
