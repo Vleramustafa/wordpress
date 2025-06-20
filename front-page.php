@@ -62,6 +62,33 @@
                 </div>
             </div>
         </section>
+        <section class="home-blog">
+            <h2>
+                Latest News
+            </h2>
+            <div class="container">
+                <?php
+                $args=array(
+                    'post_type' =>'post',
+                    'posts_per_page' =>5,
+                    'category_in'=>arra(9,10,15),
+                    'category_not_in'=>array(1)
+                );
+
+                $postlist=new WP_Query($args);
+                if($postlist->have_posts(  )):
+                    while($postlist->have_posts()):$postlist->the_post(  );
+                    get_template_part('parts/content','latest_news');
+                endwhile;
+                wp_reset_postdata();
+            else:
+                ?>
+                <p>Nothing yet to be displayed!</p>
+                <?php endif;?>
+            </div>
+        </section>
+
+
       </main> 
    </div>
   </div>
