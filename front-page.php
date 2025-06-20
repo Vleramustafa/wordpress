@@ -68,12 +68,15 @@
             </h2>
             <div class="container">
                 <?php
-                $args=array(
-                    'post_type' =>'post',
-                    'posts_per_page' =>5,
-                    'category_in'=>arra(9,10,15),
-                    'category_not_in'=>array(1)
-                );
+                  $args=array(
+                                        'post_type'=>'post',
+                                        'post_per_page'=>5,
+                                        'category_in'=>array(9,10,15),
+                                        'category_not_in'=>array(1)
+
+
+                                    );
+                                    
 
                 $postlist=new WP_Query($args);
                 if($postlist->have_posts(  )):
@@ -92,4 +95,5 @@
       </main> 
    </div>
   </div>
+ </div>
 <?php get_footer(); ?>
