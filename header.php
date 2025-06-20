@@ -4,11 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-     </head>
-    <body>
-    <?php
+     <?php
         wp_head();
     ?>
+     </head>
+    <body>
+
+   <?php wp_body_open();?>
+   <div id="page" class="site">
+    <header> 
+        <section class="top-bar">
+            <div class="container">
+                <div class="logo">
+                    <?php 
+                        if(has_custom_logo(  )){
+                            the_custom_logo(  );
+                        }else{
+                            ?>
+                            <a href="<?php echo home_url('/') ?>"><span><?php bloginfo('name');?></span></a>
+                            <?php
+                        }
+                    ?>
+                </div>
+                <div class="searchbox">
+                    <?php get_search_form();?>
+
+                </div>
+            </div>
+        </section>
     <?php
         if(! is_page('landing_page')):?>
         <section class="menu-area">
@@ -30,4 +53,6 @@
 
         </section>
     <?php endif;?>
+
+    </header>
    
