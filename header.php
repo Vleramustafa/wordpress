@@ -35,7 +35,7 @@
         </div>
                         
     <?php
-        if(! is_page('landing_page')):?>
+     if(! is_page('landing_page')):?>
         <section class="menu-area">
             <div class="container">
                 <nav class="main-menu">
@@ -57,4 +57,6 @@
 
         </section>
     <?php endif;?>
-   
+
+
+    </header>
